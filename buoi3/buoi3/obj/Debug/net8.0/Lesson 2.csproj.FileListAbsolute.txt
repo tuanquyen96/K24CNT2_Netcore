@@ -1,0 +1,33 @@
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\appsettings.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.staticwebassets.runtime.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.staticwebassets.endpoints.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.exe
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.deps.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.runtimeconfig.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.dll
+C:\Users\Adudu\source\repos\buoi3\buoi3\bin\Debug\net8.0\Lesson 2.pdb
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.AssemblyInfoInputs.cache
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.AssemblyInfo.cs
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.csproj.CoreCompileInputs.cache
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.RazorAssemblyInfo.cache
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.RazorAssemblyInfo.cs
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\scopedcss\bundle\Lesson 2.styles.css
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\scopedcss\projectbundle\Lesson 2.bundle.scp.css
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.dll
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\refint\Lesson 2.dll
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.pdb
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\Lesson 2.genruntimeconfig.cache
+C:\Users\Adudu\source\repos\buoi3\buoi3\obj\Debug\net8.0\ref\Lesson 2.dll

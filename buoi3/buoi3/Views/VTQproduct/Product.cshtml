@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Thông tin sản phẩm";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@{
+    VTQProduct product = ViewData["product"] as VTQProduct ?? new VTQProduct();
+}
+<div class="Alert alert-danger">
+    <h2>Dữ liệu lấy từ ViewData</h2>
+    <p>Mã sản phẩm: @product.ProductID</p>
+    <p>Tên sản phẩm: @product.ProductName</p>
+    <p>Năm SX: @product.YearRelease</p>
+    <p>Giá: @product.Price</p>
+</div>
+
+<div class="alert alert-info">
+    <h2>Dữ liệu lấy từ ViewBag</h2>
+    <p>Mã sản phẩm: @ViewBag.ProductID</p>
+    <p>Tên sản phẩm: @ViewBag.ProductName</p>
+    <p>Năm SX: @ViewBag.YearRelease</p>
+    <p>Giá: @ViewBag.Price</p>
+</div>  
