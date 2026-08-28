@@ -1,0 +1,50 @@
+﻿@*
+@* For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860 *@
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+
+    var products = ViewData["products"] as List<Lesson3.Models.VTQProduct> ?? new List<Lesson3.Models.VTQProduct>();
+
+}
+<div class="card">
+    <div class="card-header">
+        <h1>@ViewData["Title"]</h1>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in products)
+                {
+                    <tr>
+                        <td>@item.VTQProductId</td>
+                        <td>@item.VTQProductName</td>
+                        <td>@item.VTQYearRelease</td>
+                        <td>@item.VTQPrice</td>
+                        <td>
+                            <a href="#" class="btn btn-info">Xem chi tiết</a>
+                            <a href="#" class="btn btn-primary">Sửa</a>
+                            <a href="#" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="5">
+                        Tổng số sản phẩm: @products.Count
+                        <a href="#" class="btn btn-success">Thêm sản phẩm mới</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
