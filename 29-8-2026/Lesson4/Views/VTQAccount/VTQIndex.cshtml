@@ -1,0 +1,25 @@
+﻿@model List<VTQAccount>
+
+@{
+    ViewData["Title"] = "Danh sách tài khoản";
+}
+
+<div class="container py-4">
+    <h1 class="mb-4 text-center">@ViewData["Title"]</h1>
+
+    <div class="row g-4">
+        @foreach (var account in Model)
+        {
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <img src="@account.Avatar" alt="Ảnh đại diện của @account.Name" class="card-img-top" />
+                    <div class="card-body">
+                        <h3 class="card-title">@account.Name</h3>
+                        <p class="card-text">@account.Bio</p>
+                        <a asp-route="profile" class="btn btn-success">Profile</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

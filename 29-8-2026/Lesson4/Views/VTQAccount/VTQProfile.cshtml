@@ -1,0 +1,39 @@
+﻿@model VTQAccount
+
+@{
+    ViewData["Title"] = "Thông tin tài khoản";
+}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="border p-2"
+        <img src="@Model.Avatar" alt="@Model.Name" class="img-fluid" />
+    </div>
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body">
+                <h3>Họ tên: @Model.Name</h3>
+                <p>Email: @Model.Email</p>
+                <p>Địa chỉ: @Model.Address</p>
+                <p>Điện thoại: @Model.Phone</p>
+                <p>Tiểu sử: @Model.Bio</p>
+                <p>
+                    Giới tính:
+                    @if (Model.Gender == 0)
+                    {
+                        <span>Nam</span>
+                    }
+                    else
+                    {
+                        <span>Nữ</span>
+                    }
+                </p>
+                <p>Ngày sinh: @Model.Birthday.ToString("dd/MM/yyyy")</p>
+                <a asp-controller="VTQAccount" asp-action="VTQIndex" class="btn btn-danger">
+                    Quay lại danh sách
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
