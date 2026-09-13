@@ -1,0 +1,54 @@
+@model Lesson7.Models.DataModels.VTQMember
+
+@{
+    ViewData["Title"] = "Thêm thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>VTQMember</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="VTQMemberId" class="form-label"></label>
+                <input asp-for="VTQMemberId" class="form-control" />
+                <span asp-validation-for="VTQMemberId" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQUserName" class="form-label"></label>
+                <input asp-for="VTQUserName" class="form-control" />
+                <span asp-validation-for="VTQUserName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQPassword" class="form-label"></label>
+                <input asp-for="VTQPassword" type="password" class="form-control" />
+                <span asp-validation-for="VTQPassword" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQFullName" class="form-label"></label>
+                <input asp-for="VTQFullName" class="form-control" />
+                <span asp-validation-for="VTQFullName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQEmail" class="form-label"></label>
+                <input asp-for="VTQEmail" type="email" class="form-control" />
+                <span asp-validation-for="VTQEmail" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Tạo mới</button>
+            <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

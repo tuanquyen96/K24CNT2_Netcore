@@ -1,0 +1,43 @@
+@model IEnumerable<Lesson7.Models.DataModels.VTQMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<div class="card p-3">
+    <h1>@ViewData["Title"]</h1>
+
+    <p>
+        <a asp-action="Create" class="btn btn-primary my-1">Thêm mới</a>
+    </p>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.VTQMemberId)</th>
+                <th>@Html.DisplayNameFor(model => model.VTQUserName)</th>
+                <th>@Html.DisplayNameFor(model => model.VTQPassword)</th>
+                <th>@Html.DisplayNameFor(model => model.VTQFullName)</th>
+                <th>@Html.DisplayNameFor(model => model.VTQEmail)</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.VTQMemberId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.VTQUserName)</td>
+                    <td>@Html.DisplayFor(modelItem => item.VTQPassword)</td>
+                    <td>@Html.DisplayFor(modelItem => item.VTQFullName)</td>
+                    <td>
+                        <a href="mailto:@item.VTQEmail">@Html.DisplayFor(modelItem => item.VTQEmail)</a>
+                    </td>
+                    <td>
+                        <a asp-action="GetMember">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

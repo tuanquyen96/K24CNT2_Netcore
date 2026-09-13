@@ -1,0 +1,35 @@
+@model IEnumerable<Lesson7.Models.DataModels.VTQMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<div class="card p-3">
+    <h1>@ViewData["Title"]</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Member id</th>
+                <th>Member username</th>
+                <th>Member password</th>
+                <th>Member full name</th>
+                <th>Member email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var member in Model)
+            {
+                <tr>
+                    <td>@member.VTQMemberId</td>
+                    <td>@member.VTQUserName</td>
+                    <td>@member.VTQPassword</td>
+                    <td>@member.VTQFullName</td>
+                    <td>
+                        <a href="mailto:@member.VTQEmail">@member.VTQEmail</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

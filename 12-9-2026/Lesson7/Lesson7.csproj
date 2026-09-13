@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Views\VTQMember\GetMember.cshtml" />
+    <Content Remove="Views\VTQMember\GetMembers.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Views\VTQMember\GetMember.cshtml" />
+    <None Include="Views\VTQMember\GetMembers.cshtml" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,16 @@
+@model Lesson7.Models.DataModels.VTQMember
+
+@{
+    ViewData["Title"] = "Thông tin thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="alert alert-info">
+    <h2>@ViewData["Title"]</h2>
+    <p>Member id: @Model.VTQMemberId</p>
+    <p>Member username: @Model.VTQUserName</p>
+    <p>Member password: @Model.VTQPassword</p>
+    <p>Member full name: @Model.VTQFullName</p>
+    <p>Member email: @Model.VTQEmail</p>
+</div>
