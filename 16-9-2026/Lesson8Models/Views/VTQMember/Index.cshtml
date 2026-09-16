@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Lesson8Models.Models.VTQMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<div class="card p-3">
+    <div class="card-header">
+        <h1>Danh sách thành viên</h1>
+        <a asp-action="VTQCreate" class="btn btn-primary">Thêm mới</a>
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.VTQUserName)</th>
+                    <th>@Html.DisplayNameFor(model => model.VTQPassword)</th>
+                    <th>@Html.DisplayNameFor(model => model.VTQFullName)</th>
+                    <th>@Html.DisplayNameFor(model => model.VTQEmail)</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.VTQUserName</td>
+                    <td>@item.VTQPassword</td>
+                    <td>@item.VTQFullName</td>
+                    <td>@item.VTQEmail</td>
+                    <td>
+                        <a asp-action="VTQEdit" asp-route-id="@item.VTQMemberId">Sửa</a> |
+                        <a asp-action="VTQDetails" asp-route-id="@item.VTQMemberId">Chi tiết</a> |
+                        <a asp-action="VTQDelete" asp-route-id="@item.VTQMemberId">Xóa</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

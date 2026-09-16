@@ -1,0 +1,27 @@
+@model VTQLab04.Models.VTQMember
+@{
+    ViewData["Title"] = "VTQDelete";
+}
+<h1>Delete</h1>
+<h3>Are you sure you want to delete this?</h3>
+<h4>VTQMember</h4>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQMemberId)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQMemberId)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQUserName)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQUserName)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQPassword)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQPassword)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQFullName)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQFullName)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQEmail)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQEmail)</dd>
+    <dt class="col-sm-3">Ảnh đại diện</dt>
+    <dd class="col-sm-9"><img src="~/@Model.Avatar" alt="@Model.VTQFullName" style="width:100px" /></dd>
+</dl>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="VTQMemberId" />
+    <input type="submit" value="Delete" class="btn btn-danger" />
+    <a asp-action="Index">Back to List</a>
+</form>

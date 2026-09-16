@@ -1,0 +1,25 @@
+@model VTQLab04.Models.VTQMember
+@{
+    ViewData["Title"] = "VTQDetails";
+}
+<h1>Details</h1>
+<h4>VTQMember</h4>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQMemberId)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQMemberId)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQUserName)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQUserName)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQPassword)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQPassword)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQFullName)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQFullName)</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(model => model.VTQEmail)</dt>
+    <dd class="col-sm-9">@Html.DisplayFor(model => model.VTQEmail)</dd>
+    <dt class="col-sm-3">Ảnh đại diện</dt>
+    <dd class="col-sm-9"><img src="~/@Model.Avatar" alt="@Model.VTQFullName" style="width:150px" /></dd>
+</dl>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.VTQMemberId" class="btn btn-primary">Edit</a>
+    <a asp-action="Index">Back to List</a>
+</div>

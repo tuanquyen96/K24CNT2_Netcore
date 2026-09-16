@@ -1,0 +1,41 @@
+@model IEnumerable<VTQLab04.Models.VTQMember>
+@{
+    ViewData["Title"] = "VTQMembers";
+}
+
+<h1>Danh sách VTQMember</h1>
+<p><a asp-action="Create" class="btn btn-primary">Thêm mới VTQMember</a></p>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.VTQMemberId)</th>
+            <th>@Html.DisplayNameFor(model => model.VTQUserName)</th>
+            <th>@Html.DisplayNameFor(model => model.VTQPassword)</th>
+            <th>@Html.DisplayNameFor(model => model.VTQFullName)</th>
+            <th>@Html.DisplayNameFor(model => model.VTQEmail)</th>
+            <th>Ảnh đại diện</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.VTQMemberId)</td>
+            <td>@Html.DisplayFor(modelItem => item.VTQUserName)</td>
+            <td>@Html.DisplayFor(modelItem => item.VTQPassword)</td>
+            <td>@Html.DisplayFor(modelItem => item.VTQFullName)</td>
+            <td>@Html.DisplayFor(modelItem => item.VTQEmail)</td>
+            <td>
+                <img src="~/@item.Avatar" alt="@item.VTQFullName" style="width:60px;height:60px;object-fit:cover" />
+            </td>
+            <td class="text-nowrap">
+                <a asp-action="Edit" asp-route-id="@item.VTQMemberId" class="btn btn-primary btn-sm">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.VTQMemberId" class="btn btn-success btn-sm">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.VTQMemberId" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

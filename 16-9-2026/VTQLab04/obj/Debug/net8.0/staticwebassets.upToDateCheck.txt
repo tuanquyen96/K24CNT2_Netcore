@@ -1,0 +1,8 @@
+wwwroot\js\site.js
+wwwroot\images\avatar\05.svg
+wwwroot\images\avatar\04.svg
+wwwroot\images\avatar\03.svg
+wwwroot\images\avatar\02.svg
+wwwroot\images\avatar\01.svg
+wwwroot\css\site.css
+wwwroot\images\avatar\icon1.png
