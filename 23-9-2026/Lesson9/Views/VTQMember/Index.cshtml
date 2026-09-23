@@ -1,0 +1,50 @@
+@model IEnumerable<Lesson9.Models.DataModels.VTQMember>
+
+@{
+    ViewData["Title"] = "Danh sách thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Thêm thành viên</a>
+</p>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Tên ??ng nh?p</th>
+            <th>Email</th>
+            <th>S? ?i?n tho?i</th>
+            <th>H? tên</th>
+            <th>Ngày sinh</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.VTQUserName</td>
+                    <td>@item.VTQEmail</td>
+                    <td>@item.VTQPhoneNumber</td>
+                    <td>@item.VTQFullName</td>
+                    <td>@item.VTQBirthday.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@item.VTQMemberId">Chi ti?t</a> |
+                        <a asp-action="Edit" asp-route-id="@item.VTQMemberId">S?a</a> |
+                        <a asp-action="Delete" asp-route-id="@item.VTQMemberId">Xóa</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" class="text-center">Ch?a có thành viên nào.</td>
+            </tr>
+        }
+    </tbody>
+</table>

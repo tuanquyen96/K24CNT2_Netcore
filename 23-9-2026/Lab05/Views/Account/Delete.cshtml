@@ -1,0 +1,17 @@
+@model Lab05.Models.Account
+@{
+    ViewData["Title"] = "Delete";
+}
+<h2>Delete</h2>
+<h4>Bạn có chắc muốn xóa Account này?</h4>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">Họ và tên</dt><dd class="col-sm-9">@Model.FullName</dd>
+    <dt class="col-sm-3">Email</dt><dd class="col-sm-9">@Model.Email</dd>
+    <dt class="col-sm-3">Số điện thoại</dt><dd class="col-sm-9">@Model.Phone</dd>
+</dl>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>

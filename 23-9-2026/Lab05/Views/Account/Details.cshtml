@@ -1,0 +1,20 @@
+@model Lab05.Models.Account
+@{
+    ViewData["Title"] = "Details";
+}
+<h2>Details</h2>
+<hr />
+<dl class="row">
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Id)</dt><dd class="col-sm-9">@Model.Id</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.FullName)</dt><dd class="col-sm-9">@Model.FullName</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Email)</dt><dd class="col-sm-9">@Model.Email</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Phone)</dt><dd class="col-sm-9">@Model.Phone</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Address)</dt><dd class="col-sm-9">@Model.Address</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Avatar)</dt><dd class="col-sm-9">@Model.Avatar</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Birthday)</dt><dd class="col-sm-9">@Model.Birthday.ToString("dd/MM/yyyy")</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Gender)</dt><dd class="col-sm-9">@Model.Gender</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Password)</dt><dd class="col-sm-9">@Model.Password</dd>
+    <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Facebook)</dt><dd class="col-sm-9">@Model.Facebook</dd>
+</dl>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Sửa</a>
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>

@@ -1,0 +1,58 @@
+@model Lesson9.Models.DataViewModels.VTQMemberRegister
+
+@{
+    ViewData["Title"] = "Thêm thành viên";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="VTQUserName" class="form-label"></label>
+                <input asp-for="VTQUserName" class="form-control" />
+                <span asp-validation-for="VTQUserName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQPassword" class="form-label"></label>
+                <input asp-for="VTQPassword" class="form-control" />
+                <span asp-validation-for="VTQPassword" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQEmail" class="form-label"></label>
+                <input asp-for="VTQEmail" class="form-control" />
+                <span asp-validation-for="VTQEmail" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQPhoneNumber" class="form-label"></label>
+                <input asp-for="VTQPhoneNumber" class="form-control" />
+                <span asp-validation-for="VTQPhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQFullName" class="form-label"></label>
+                <input asp-for="VTQFullName" class="form-control" />
+                <span asp-validation-for="VTQFullName" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="VTQBirthday" class="form-label"></label>
+                <input asp-for="VTQBirthday" type="date" class="form-control" />
+                <span asp-validation-for="VTQBirthday" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Thêm</button>
+            <a asp-action="Index" class="btn btn-secondary">Quay l?i</a>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
