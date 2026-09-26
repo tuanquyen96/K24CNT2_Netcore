@@ -1,0 +1,10 @@
+@model VTQStudent
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="row g-3">
+<div class="col-md-6"><label asp-for="VTQName" class="form-label"></label><input asp-for="VTQName" class="form-control" /><span asp-validation-for="VTQName" class="text-danger"></span></div>
+<div class="col-md-6"><label asp-for="VTQGender" class="form-label"></label><select asp-for="VTQGender" class="form-select"><option value="">-- Chọn --</option><option>Nam</option><option>Nữ</option></select></div>
+<div class="col-md-6"><label asp-for="VTQBirthDay" class="form-label"></label><input asp-for="VTQBirthDay" class="form-control" type="date" /></div>
+<div class="col-md-6"><label asp-for="VTQEmail" class="form-label"></label><input asp-for="VTQEmail" class="form-control" /></div>
+<div class="col-md-6"><label asp-for="VTQPhone" class="form-label"></label><input asp-for="VTQPhone" class="form-control" /></div>
+<div class="col-md-6 d-flex align-items-end"><div class="form-check mb-2"><input asp-for="VTQActive" class="form-check-input" /><label asp-for="VTQActive" class="form-check-label"></label></div></div>
+</div>

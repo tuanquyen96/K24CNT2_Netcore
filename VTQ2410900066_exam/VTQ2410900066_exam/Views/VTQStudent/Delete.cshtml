@@ -1,0 +1,4 @@
+@model VTQStudent
+@{ ViewData["Title"] = "Xóa sinh viên"; }
+<h1 class="h2 fw-bold mb-4">Xóa sinh viên</h1>
+<div class="card border-0 shadow-sm rounded-4 p-4"><p>Bạn có chắc muốn xóa sinh viên <strong>@Model.VTQName</strong>?</p><form asp-action="Delete"><input type="hidden" asp-for="Id" /><button class="btn btn-danger">Xóa</button> <a class="btn btn-light" asp-action="Index">Hủy</a></form></div>
