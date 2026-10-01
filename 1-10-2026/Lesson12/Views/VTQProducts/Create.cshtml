@@ -1,0 +1,49 @@
+@model VTQProduct
+@{
+    ViewData["Title"] = "Thêm mới sản phẩm";
+}
+<h1>Thêm mới sản phẩm</h1>
+<hr />
+<form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-7">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Image</label>
+                <input type="file" name="files" class="form-control" accept="image/*" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Descriptions" class="form-label"></label>
+                <textarea asp-for="Descriptions" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Descriptions" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="mb-3">
+                <label asp-for="CategoryId" class="form-label">CategoryId</label>
+                <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="SalePrice" class="form-label"></label>
+                <input asp-for="SalePrice" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Status" class="form-label"></label>
+                <input asp-for="Status" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">Lưu lại</button>
+    <a class="btn btn-secondary" asp-action="Index">Về danh sách</a>
+</form>
+@section Scripts { <partial name="_ValidationScriptsPartial" /> }

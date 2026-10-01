@@ -1,0 +1,31 @@
+@model IEnumerable<VTQCategory>
+@{
+    ViewData["Title"] = "Danh sách danh mục";
+}
+<h1>Danh sách danh mục</h1>
+<p><a class="btn btn-sm btn-success" asp-action="Create">Thêm mới danh mục</a></p>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Tên danh mục</th>
+            <th>Trạng thái</th>
+            <th>Ngày tạo</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Status</td>
+            <td>@item.CreatedDate.ToString("dd/MM/yyyy HH:mm:ss")</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-sm btn-success" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

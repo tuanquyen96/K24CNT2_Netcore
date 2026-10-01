@@ -1,0 +1,48 @@
+@model IEnumerable<VTQProduct>
+@{
+    ViewData["Title"] = "Danh sách sản phẩm";
+}
+<h1>Danh sách sản phẩm</h1>
+<p><a class="btn btn-sm btn-success" asp-action="Create">Thêm mới sản phẩm</a></p>
+<div class="table-responsive">
+<table class="table table-bordered table-hover align-middle">
+    <thead>
+        <tr>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <th>Giá</th>
+            <th>Giá khuyến mãi</th>
+            <th>Trạng thái</th>
+            <th>Mô tả</th>
+            <th>Ngày tạo</th>
+            <th>Danh mục</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.Image))
+                {
+                    <img src="~/Product/@item.Image" width="80" height="60" style="object-fit:cover" alt="@item.Name" />
+                }
+            </td>
+            <td>@item.Price</td>
+            <td>@item.SalePrice</td>
+            <td>@item.Status</td>
+            <td>@item.Descriptions</td>
+            <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
+            <td>@item.Category?.Name</td>
+            <td>
+                <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="btn btn-sm btn-success" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                <a class="btn btn-sm btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>
