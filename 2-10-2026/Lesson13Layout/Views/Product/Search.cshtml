@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Tìm kiếm sản phẩm";
+}
+
+<h1>Tìm kiếm sản phẩm</h1>
+
+<form asp-controller="Product" asp-action="Search" method="get">
+    <label for="keyword">Từ khóa:</label>
+    <input id="keyword" name="keyword" type="text" value="@(ViewData["Keyword"] ?? "")" />
+    <button type="submit">Tìm kiếm</button>
+</form>
+
+<p>Từ khóa đang tìm: <strong>@(ViewData["Keyword"] ?? "Chưa nhập")</strong></p>
